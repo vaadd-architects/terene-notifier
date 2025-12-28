@@ -41,7 +41,7 @@ async function fetchAdminContacts() {
   return { adminPhones, adminEmails }
 }
 
-async function updateDaysOccupancy(orderData, occupied, testMode = false) {
+async function updateDaysOccupancy(orderData, occupied, testMode) {
   const basePath = testMode
     ? "https://terene-db-server.onrender.com/api/test/days"
     : "https://terene-db-server.onrender.com/api/v3/days"
