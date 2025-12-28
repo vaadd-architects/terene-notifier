@@ -629,6 +629,19 @@ async function processJobEF(payload) {
     youth: String(orderData.stay_people?.teenager || "0"),
     child: String(orderData.stay_people?.child),
   }
+  const paramsC = {
+    stay_location: `${orderData.stay_location}`,
+    reserver_name: orderData.stay_info?.name || orderData.reserver_name,
+    order_id: orderData.order_id,
+    membership_number: orderData.membership_number || "비회원 예약",
+    reserver_contact: String(orderData.stay_info?.contact || orderData.reserver_contact),
+    checkin_date: orderData.checkin_date,
+    checkout_date: orderData.checkout_date,
+    adult: String(orderData.stay_people?.adult),
+    youth: String(orderData.stay_people?.teenager || "0"),
+    child: String(orderData.stay_people?.child),
+    final_price: String(Number(orderData.final_price ?? "0").toLocaleString()),
+  }
 
   try {
     for (const p of adminPhones || []) {
@@ -653,7 +666,7 @@ async function processJobEF(payload) {
   })
   await fetch(`https://terene-notifier-server.onrender.com/api/email/v2`, {
     method: "POST", headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ receiver_email: orderData.reserver_email, template_type: templateCode, platform: "gmail", params: paramsB, lang: lang }),
+    body: JSON.stringify({ receiver_email: orderData.reserver_email, template_type: templateCode, platform: "gmail", params: lang !== "foreign_en" ? paramsB : paramsC, lang: lang }),
   })
   if (lang !== "foreign_en" && !orderData.stay_info?.same_as_reserver && orderData.stay_info?.contact) {
     await fetch(`https://terene-notifier-server.onrender.com/api/kakao/v2`, {

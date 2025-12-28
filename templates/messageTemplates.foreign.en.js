@@ -104,7 +104,7 @@ TERENE ${stay_location} Team`
 
     body: ({
       stay_location, reserver_name, order_id, membership_number,
-      reserver_contact, checkin_date, checkout_date, adult, youth, child
+      reserver_contact, checkin_date, checkout_date, adult, youth, child, final_price
     }) => `Dear ${reserver_name},
 We would like to inform you that your reservation has been cancelled.
 
@@ -247,7 +247,7 @@ TERENE ${stay_location} Team`
     title: ({ stay_location, order_id }) =>
       `[TERENE ${stay_location} | Check-Out Receipt (Reservation #${order_id})]`,
 
-    body: ({ stay_location, reserver_name, order_id, final_price, deposit_price, additional_price, settlement_breakdown, settlement_amount }) => `Dear ${reserver_name},
+    body: ({ stay_location, reserver_name, order_id, deposit_price, additional_price, settlement_breakdown, settlement_amount }) => `Dear ${reserver_name},
 We are pleased to inform you that the final invoice for your stay (Reservation No. ${order_id}) has been issued.
 
 Payment Amount: KRW ${settlement_amount.toLocaleString()}
