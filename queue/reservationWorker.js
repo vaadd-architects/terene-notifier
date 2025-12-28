@@ -89,7 +89,7 @@ async function updateDaysOccupancy(orderData, occupied, testMode) {
     const date_id = `${day.date}_${location}`
 
     // ✅ PUT 요청
-    const r = await fetch(`https://terene-db-server.onrender.com/api/v3/days/${date_id}`, {
+    const r = await fetch(`${basePath}/${date_id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
