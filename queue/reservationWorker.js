@@ -383,7 +383,7 @@ async function processJobA(payload) {
           params: templateParamsB || templateParams,
         }),
       })
-    }
+    }s
   } catch {}
 }
 

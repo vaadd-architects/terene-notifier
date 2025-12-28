@@ -15,7 +15,7 @@ function enqueue(payload) {
 
 router.post("/A", async (req, res) => {
   try {
-    const { orderId, amount, paymentKey, isFree, isAdminBypass, templateParams, templateParamsB, test_mode, lang } = req.body
+    const { orderId, amount, paymentKey, isFree, isAdminBypass, templateParams, templateParamsB, testMode, lang } = req.body
     if (!orderId) return res.status(400).json({ error: "orderId required" })
     const id = enqueue({
       kind: "A",
@@ -26,7 +26,7 @@ router.post("/A", async (req, res) => {
       isAdminBypass: !!isAdminBypass,
       templateParams: templateParams || {},
       templateParamsB: templateParamsB || {},
-      test_mode: !!test_mode,
+      testMode: !!testMode,
       lang,
     })
     res.json({ ok: true, jobId: id })
