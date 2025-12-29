@@ -14,7 +14,7 @@ If you provide a scanned copy or image of your passport in advance,
 we can expedite your check-in process.
 Your personal information will be securely handled in accordance with our privacy policy.
 
-Reservation Informaiton
+Reservation Details
 
 1. Reservation No. : ${order_id}
 2. Membership No. : ${membership_number}
