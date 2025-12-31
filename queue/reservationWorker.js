@@ -446,9 +446,9 @@ async function processJobCD(payload) {
   if (!cRes.ok) throw new Error("cancellation create failed")
 
   await updateDaysOccupancy(orderData, false, testMode)
-  await restoreCouponsAndMileage_OnCancel(orderData)
 
   if (isPaidFlow) {
+    await restoreCouponsAndMileage_OnCancel(orderData)
     const payAll = await fetchJSON(`https://terene-db-server.onrender.com/api/v2/payments`)
     const originalPayment = payAll.find((p) => p.order_id===orderId && p.payment_type==="order")
     if (!originalPayment) throw new Error("original payment not found")
