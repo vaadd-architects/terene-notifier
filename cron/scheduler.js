@@ -160,7 +160,7 @@ function startScheduledJobs() {
         const orderParamsG_admin = {
           stay_location: order.stay_location,
           reserver_name: order.stay_info.name,
-          nationality: order.nationality,
+          nationality: orderData.nationality === "foreign" ? "Foreign" : "내국인",
           order_id: order.old_order_id ? `${order.order_id} (구 ${order.old_order_id})` : order.order_id,
           membership_number: order.membership_number || "비회원",
           reserver_contact: order.stay_info.contact,

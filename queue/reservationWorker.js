@@ -475,7 +475,7 @@ async function processJobCD(payload) {
     const templateParamsB = {
       stay_location: `${orderData.stay_location}`,
       reserver_name: orderData.stay_info?.name || orderData.reserver_name,
-      nationality: orderData.nationality,
+      nationality: orderData.nationality === "foreign" ? "Foreign" : "내국인",
       order_id: orderData.order_id,
       membership_number: orderData.membership_number || "비회원 예약",
       reserver_contact: String(orderData.stay_info?.contact || orderData.reserver_contact),
@@ -620,7 +620,7 @@ async function processJobEF(payload) {
   const paramsB = {
     stay_location: `${orderData.stay_location}`,
     reserver_name: orderData.stay_info?.name || orderData.reserver_name,
-    nationality: orderData.nationality,
+    nationality: orderData.nationality === "foreign" ? "Foreign" : "내국인",
     order_id: orderData.order_id,
     membership_number: orderData.membership_number || "비회원 예약",
     reserver_contact: String(orderData.stay_info?.contact || orderData.reserver_contact),
@@ -632,7 +632,7 @@ async function processJobEF(payload) {
   const paramsC = {
     stay_location: `${orderData.stay_location}`,
     reserver_name: orderData.stay_info?.name || orderData.reserver_name,
-    nationality: orderData.nationality,
+    nationality: orderData.nationality === "foreign" ? "Foreign" : "내국인",
     order_id: orderData.order_id,
     membership_number: orderData.membership_number || "비회원 예약",
     reserver_contact: String(orderData.stay_info?.contact || orderData.reserver_contact),
