@@ -4,8 +4,8 @@ const messageTemplates = {
       `[TERENE ${stay_location} | Reservation Confirmation & Pre-Arrival Information Request]`,
 
     body: ({
-      stay_location, reserver_name, order_id, membership_number,
-      reserver_contact, checkin_date, checkout_date, adult, youth, child, final_price
+      stay_location, reserver_name, nationality, order_id, membership_number,
+      reserver_contact, checkin_date, checkout_date, adult, child, final_price
     }) => `Dear ${reserver_name},
 Thank you for choosing TERENE ${stay_location}.
 We are pleased to inform you that your reservation has been provisionally confirmed.
@@ -16,14 +16,15 @@ Your personal information will be securely handled in accordance with our privac
 
 Reservation Details
 
-1. Reservation No. : ${order_id}
-2. Membership No. : ${membership_number}
-3. Name : ${reserver_name}
-4. Phone Number : ${reserver_contact}
-5. Accomodation : TERENE ${stay_location}
-6. Stay Period : ${checkin_date}~${checkout_date}
-7. Number of Guests : ${adult} Adults, ${youth} Youth, ${child} Infants
-8. Total Amount : ${final_price.toLocaleString()}
+1. Nationality : ${nationality}
+2. Reservation No. : ${order_id}
+3. Membership No. : ${membership_number}
+4. Name : ${reserver_name}
+5. Phone Number : ${reserver_contact}
+6. Accomodation : TERENE ${stay_location}
+7. Stay Period : ${checkin_date}~${checkout_date}
+8. Number of Guests : ${adult} Adults, ${child} Infants
+9. Total Amount : ${final_price.toLocaleString()}
 
 Your reservation details can be checked at any time on the TERENE website under Reservation → ‘Check Guest Reservation’
 
@@ -69,21 +70,22 @@ TERENE ${stay_location} Team`
       `[TERENE ${stay_location}] | Reservation Cancellation Notice`,
 
     body: ({
-      stay_location, reserver_name, order_id, membership_number,
-      reserver_contact, checkin_date, checkout_date, adult, youth, child, final_price
+      stay_location, reserver_name, nationality, order_id, membership_number,
+      reserver_contact, checkin_date, checkout_date, adult, child, final_price
     }) => `Dear ${reserver_name},
 We would like to inform you that your reservation has been cancelled.
 
 Reservation Details
 
-1. Reservation No. : ${order_id}
-2. Membership No. : ${membership_number}
-3. Name : ${reserver_name}
-4. Phone Number : ${reserver_contact}
-5. Accomodation : TERENE ${stay_location}
-6. Stay Period : ${checkin_date}~${checkout_date}
-7. Number of Guests : ${adult} Adults, ${youth} Youth, ${child} Infants
-8. Total Amount : ${final_price.toLocaleString()}
+1. Nationality : ${nationality}
+2. Reservation No. : ${order_id}
+3. Membership No. : ${membership_number}
+4. Name : ${reserver_name}
+5. Phone Number : ${reserver_contact}
+6. Accomodation : TERENE ${stay_location}
+7. Stay Period : ${checkin_date}~${checkout_date}
+8. Number of Guests : ${adult} Adults, ${child} Infants
+9. Total Amount : ${final_price.toLocaleString()}
 
 Once a cancellation request has been submitted, it cannot be withdrawn.
 Refunds will be handled in accordance with our policy and are usually completed within 3–5 business days.
@@ -103,21 +105,22 @@ TERENE ${stay_location} Team`
       `[TERENE ${stay_location} | Reservation Cancellation Notice]`,
 
     body: ({
-      stay_location, reserver_name, order_id, membership_number,
+      stay_location, reserver_name, nationality, order_id, membership_number,
       reserver_contact, checkin_date, checkout_date, adult, youth, child, final_price
     }) => `Dear ${reserver_name},
 We would like to inform you that your reservation has been cancelled.
 
 Reservation Details
 
-1. Reservation No. : ${order_id}
-2. Membership No. : ${membership_number}
-3. Name : ${reserver_name}
-4. Phone Number : ${reserver_contact}
-5. Accomodation : TERENE ${stay_location}
-6. Stay Period : ${checkin_date}~${checkout_date}
-7. Number of Guests : ${adult} Adults, ${youth} Youth, ${child} Infants
-8. Total Amount : ${final_price.toLocaleString()}
+1. Nationality : ${nationality}
+2. Reservation No. : ${order_id}
+3. Membership No. : ${membership_number}
+4. Name : ${reserver_name}
+5. Phone Number : ${reserver_contact}
+6. Accomodation : TERENE ${stay_location}
+7. Stay Period : ${checkin_date}~${checkout_date}
+8. Number of Guests : ${adult} Adults, ${child} Infants
+9. Total Amount : ${final_price.toLocaleString()}
 
 Refunds will be handled in accordance with our policy and are usually completed within 3–5 business days.
 Please accept our sincere apologies for the inconvenience caused.

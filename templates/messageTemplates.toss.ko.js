@@ -4,20 +4,21 @@ const messageTemplates = {
       `[TERENE ${stay_location}] ${reserver_name}님 예약 확정`,
 
     body: ({
-      stay_location, reserver_name, order_id, membership_number,
-      reserver_contact, checkin_date, checkout_date, adult, youth, child
+      stay_location, reserver_name, nationality, order_id, membership_number,
+      reserver_contact, checkin_date, checkout_date, adult, child
     }) => `[TERENE ${stay_location}]
 ${reserver_name}님의 예약이 확정되었습니다.
 
 예약정보
 
-1. 예약번호 : ${order_id}
-2. 회원번호 : ${membership_number}
-3. 이름 : ${reserver_name}
-4. 연락처 : ${reserver_contact}
-5. 지점 : TERENE ${stay_location}
-6. 숙박 일정 : ${checkin_date}~${checkout_date}
-7. 숙박 인원 : 성인 ${adult}명, 청소년/아동 ${youth}명, 영유아 ${child}명
+1. 국적구분 : ${nationality}
+2. 예약번호 : ${order_id}
+3. 회원번호 : ${membership_number}
+4. 이름 : ${reserver_name}
+5. 연락처 : ${reserver_contact}
+6. 지점 : TERENE ${stay_location}
+7. 숙박 일정 : ${checkin_date}~${checkout_date}
+8. 숙박 인원 : 일반 ${adult}명, 유아 ${child}명
 
 상세 예약 내용은 홈페이지 > 예약하기 > 예약 조회하기 에서 확인하실 수 있습니다.
 
@@ -33,21 +34,22 @@ ${reserver_name}님의 예약이 확정되었습니다.
       `[TERENE ${stay_location}] ${reserver_name}님 예약 취소 접수`,
 
     body: ({
-      stay_location, reserver_name, order_id, membership_number,
-      reserver_contact, checkin_date, checkout_date, adult, youth, child, final_price
+      stay_location, reserver_name, nationality, order_id, membership_number,
+      reserver_contact, checkin_date, checkout_date, adult, child, final_price
     }) => `[TERENE ${stay_location}]
 ${reserver_name}님의 예약 취소가 접수되었습니다.
 
 [예약정보]
 
-1. 예약번호 : ${order_id}
-2. 회원번호 : ${membership_number}
-3. 이름 : ${reserver_name}
-4. 연락처 : ${reserver_contact}
-5. 지점 : TERENE ${stay_location}
-6. 숙박 일정 : ${checkin_date}~${checkout_date}
-7. 숙박 인원 : 성인 ${adult}명, 청소년/아동 ${youth}명, 영유아 ${child}명 
-8. 결제 금액 : ${final_price}원`
+1. 국적구분 : ${nationality}
+2. 예약번호 : ${order_id}
+3. 회원번호 : ${membership_number}
+4. 이름 : ${reserver_name}
+5. 연락처 : ${reserver_contact}
+6. 지점 : TERENE ${stay_location}
+7. 숙박 일정 : ${checkin_date}~${checkout_date}
+8. 숙박 인원 : 일 ${adult}명, 영유아 ${child}명
+9. 결제 금액 : ${final_price}원`
   },
 
   E: {
@@ -55,20 +57,21 @@ ${reserver_name}님의 예약 취소가 접수되었습니다.
       `[TERENE ${stay_location}] ${reserver_name}님 예약 취소 완료`,
 
     body: ({
-      stay_location, reserver_name, order_id, membership_number,
-      reserver_contact, checkin_date, checkout_date, adult, youth, child
+      stay_location, reserver_name, nationality, order_id, membership_number,
+      reserver_contact, checkin_date, checkout_date, adult, child
     }) => `[TERENE ${stay_location}]
 ${reserver_name}님의 예약이 취소되었습니다.
 
 [예약정보]
 
-1. 예약번호 : ${order_id}
-2. 회원번호 : ${membership_number}
-3. 이름 : ${reserver_name}
-4. 연락처 : ${reserver_contact}
-5. 지점 : TERENE ${stay_location}
-6. 숙박 일정 : ${checkin_date}~${checkout_date}
-7. 숙박 인원 : 성인 ${adult}명, 청소년/아동 ${youth}명, 영유아 ${child}명 
+1. 국적구분 : ${nationality}
+2. 예약번호 : ${order_id}
+3. 회원번호 : ${membership_number}
+4. 이름 : ${reserver_name}
+5. 연락처 : ${reserver_contact}
+6. 지점 : TERENE ${stay_location}
+7. 숙박 일정 : ${checkin_date}~${checkout_date}
+8. 숙박 인원 : 일반 ${adult}명, 유아 ${child}명
 
 예약 취소는 접수 이후 재취소가 불가합니다.
 환불은 환불규정에 따라 처리되며 평균 3~5영업일 이내에 처리됩니다. 
@@ -81,20 +84,21 @@ ${reserver_name}님의 예약이 취소되었습니다.
       `[TERENE ${stay_location}] ${reserver_name}님 예약 취소 완료`,
 
     body: ({
-      stay_location, reserver_name, order_id, membership_number,
+      stay_location, reserver_name, nationality, order_id, membership_number,
       reserver_contact, checkin_date, checkout_date, adult, youth, child
     }) => `[TERENE ${stay_location}]
 ${reserver_name}님의 예약이 취소 완료되었습니다.
 
 예약정보
 
-1. 예약번호 : ${order_id}
-2. 회원번호 : ${membership_number}
-3. 이름 : ${reserver_name}
-4. 연락처 : ${reserver_contact}
-5. 지점 : TERENE ${stay_location}
-6. 숙박 일정 : ${checkin_date}~${checkout_date}
-7. 숙박 인원 : 성인 ${adult}명, 청소년/아동 ${youth}명, 영유아 ${child}명
+1. 국적구분 : ${nationality}
+2. 예약번호 : ${order_id}
+3. 회원번호 : ${membership_number}
+4. 이름 : ${reserver_name}
+5. 연락처 : ${reserver_contact}
+6. 지점 : TERENE ${stay_location}
+7. 숙박 일정 : ${checkin_date}~${checkout_date}
+8. 숙박 인원 : 일반 ${adult}명, 유아 ${child}명
 
 환불 처리는 평균 3~5영업일 이내에 처리됩니다. 
 
@@ -131,23 +135,24 @@ ${arrival_link}
       `[TERENE ${stay_location}] ${reserver_name}님 체크인 안내 (관리자용)`,
 
     body: ({
-      stay_location, reserver_name, order_id, membership_number, reserver_contact,
-      checkin_date, checkout_date, adult, youth, child, special_requests, services, admin_notes
+      stay_location, reserver_name, nationality, order_id, membership_number, reserver_contact,
+      checkin_date, checkout_date, adult, child, special_requests, services, admin_notes
     }) => `[TERENE ${stay_location}]
 ${reserver_name}님이 체크인하는 날입니다
 
 예약정보
 
-1. 예약번호 : ${order_id}
-2. 회원번호 : ${membership_number}
-3. 이름 : ${reserver_name}
-4. 연락처 : ${reserver_contact}
-5. 지점 : TERENE ${stay_location}
-6. 숙박 일정 : ${checkin_date}~${checkout_date}
-7. 숙박 인원 : 성인 ${adult}명, 청소년/아동 ${youth}명, 영유아 ${child}명 
-8. 요청사항 : ${special_requests}
-9. 추가 서비스 : ${services}
-10. 특이사항 : ${admin_notes}`
+1. 국적구분 : ${nationality}
+2. 예약번호 : ${order_id}
+3. 회원번호 : ${membership_number}
+4. 이름 : ${reserver_name}
+5. 연락처 : ${reserver_contact}
+6. 지점 : TERENE ${stay_location}
+7. 숙박 일정 : ${checkin_date}~${checkout_date}
+8. 숙박 인원 : 일반 ${adult}명, 유아 ${child}명
+9. 요청사항 : ${special_requests}
+10. 추가 서비스 : ${services}
+11. 특이사항 : ${admin_notes}`
   },
 
   H: {

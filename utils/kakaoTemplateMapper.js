@@ -20,13 +20,13 @@ const kakaoTemplateMap = {
     variables: [
       "stay_location",
       "reserver_name",
+      "nationality",
       "order_id",
       "membership_number",
       "reserver_contact",
       "checkin_date",
       "checkout_date",
       "adult",
-      "youth",
       "child",
       "final_price"
     ]
@@ -37,13 +37,13 @@ const kakaoTemplateMap = {
     variables: [
       "stay_location",
       "reserver_name",
+      "nationality",
       "order_id",
       "membership_number",
       "reserver_contact",
       "checkin_date",
       "checkout_date",
       "adult",
-      "youth",
       "child"
     ]
   },
@@ -53,13 +53,13 @@ const kakaoTemplateMap = {
     variables: [
       "stay_location",
       "reserver_name",
+      "nationality",
       "order_id",
       "membership_number",
       "reserver_contact",
       "checkin_date",
       "checkout_date",
       "adult",
-      "youth",
       "child"
     ]
   },
@@ -78,13 +78,13 @@ const kakaoTemplateMap = {
     variables: [
       "stay_location",
       "reserver_name",
+      "nationality",
       "order_id",
       "membership_number",
       "reserver_contact",
       "checkin_date",
       "checkout_date",
       "adult",
-      "youth",
       "child",
       "special_requests",
       "services",

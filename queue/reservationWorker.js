@@ -475,13 +475,13 @@ async function processJobCD(payload) {
     const templateParamsB = {
       stay_location: `${orderData.stay_location}`,
       reserver_name: orderData.stay_info?.name || orderData.reserver_name,
+      nationality: orderData.nationality,
       order_id: orderData.order_id,
       membership_number: orderData.membership_number || "비회원 예약",
       reserver_contact: String(orderData.stay_info?.contact || orderData.reserver_contact),
       checkin_date: orderData.checkin_date,
       checkout_date: orderData.checkout_date,
       adult: String(orderData.stay_people?.adult),
-      youth: String(orderData.stay_people?.teenager || "0"),
       child: String(orderData.stay_people?.child),
       final_price: String(Number(orderData.final_price ?? "0").toLocaleString()),
     }
@@ -620,25 +620,25 @@ async function processJobEF(payload) {
   const paramsB = {
     stay_location: `${orderData.stay_location}`,
     reserver_name: orderData.stay_info?.name || orderData.reserver_name,
+    nationality: orderData.nationality,
     order_id: orderData.order_id,
     membership_number: orderData.membership_number || "비회원 예약",
     reserver_contact: String(orderData.stay_info?.contact || orderData.reserver_contact),
     checkin_date: orderData.checkin_date,
     checkout_date: orderData.checkout_date,
     adult: String(orderData.stay_people?.adult),
-    youth: String(orderData.stay_people?.teenager || "0"),
     child: String(orderData.stay_people?.child),
   }
   const paramsC = {
     stay_location: `${orderData.stay_location}`,
     reserver_name: orderData.stay_info?.name || orderData.reserver_name,
+    nationality: orderData.nationality,
     order_id: orderData.order_id,
     membership_number: orderData.membership_number || "비회원 예약",
     reserver_contact: String(orderData.stay_info?.contact || orderData.reserver_contact),
     checkin_date: orderData.checkin_date,
     checkout_date: orderData.checkout_date,
     adult: String(orderData.stay_people?.adult),
-    youth: String(orderData.stay_people?.teenager || "0"),
     child: String(orderData.stay_people?.child),
     final_price: String(Number(orderData.final_price ?? "0").toLocaleString()),
   }

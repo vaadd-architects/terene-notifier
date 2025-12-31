@@ -160,13 +160,13 @@ function startScheduledJobs() {
         const orderParamsG_admin = {
           stay_location: order.stay_location,
           reserver_name: order.stay_info.name,
+          nationality: order.nationality,
           order_id: order.old_order_id ? `${order.order_id} (구 ${order.old_order_id})` : order.order_id,
           membership_number: order.membership_number || "비회원",
           reserver_contact: order.stay_info.contact,
           checkin_date: order.checkin_date,
           checkout_date: order.checkout_date, 
           adult: order.stay_people.adult,
-          youth: order.stay_people.teenager || 0,
           child: order.stay_people.child || 0,
           special_requests: order.stay_details.special_requests || "-",
           services:
