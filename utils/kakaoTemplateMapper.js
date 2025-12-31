@@ -1,6 +1,6 @@
 const kakaoTemplateMap = {
   A: {
-    templateId: "KA01PF250714152254890kNpf8SV8Etz",
+    templateId: "KA01TP251229012926782LXCwan99hr8",
     variables: [
       "stay_location",
       "reserver_name",
@@ -16,7 +16,7 @@ const kakaoTemplateMap = {
   },
 
   C: {
-    templateId: "KA01TP250717094743450Wf4kKoUAhxW",
+    templateId: "KA01TP251229013101720B7Fyw49AeiI",
     variables: [
       "stay_location",
       "reserver_name",
@@ -33,7 +33,7 @@ const kakaoTemplateMap = {
   },
 
   E: {
-    templateId: "KA01TP250717103755493cUguDda3Z52",
+    templateId: "KA01TP251229013159162XCv4hadtfG1",
     variables: [
       "stay_location",
       "reserver_name",
@@ -49,7 +49,7 @@ const kakaoTemplateMap = {
   },
 
   F: {
-    templateId: "KA01TP250717104028375LQrbkJSCOOA",
+    templateId: "KA01TP251229013230821ffUiRUXXpLr",
     variables: [
       "stay_location",
       "reserver_name",
@@ -74,7 +74,7 @@ const kakaoTemplateMap = {
   },
 
   G_admin: {
-    templateId: "KA01TP250719085943523SM4adUoNUs1",
+    templateId: "KA01TP251229013459473G7hUqGlcwGe",
     variables: [
       "stay_location",
       "reserver_name",
