@@ -103,7 +103,7 @@ async function updateDaysOccupancy(orderData, occupied, testMode) {
   }
 }
 
-async function restoreCouponsAndMileage_OnCancel(orderData) {
+async function restoreCouponsAndMileage_OnCancel(orderData, isPaidFlow) {
   try {
     const couponRes = await fetch(`https://terene-db-server.onrender.com/api/v2/coupon-instances`)
     if (couponRes.ok) {
@@ -151,7 +151,7 @@ async function restoreCouponsAndMileage_OnCancel(orderData) {
           let s = ""; for (let i=0;i<n;i++) s += c[Math.floor(Math.random()*c.length)]
           return s
         }
-        for (const e of miEntries) {
+        if (isPaidFlow) for (const e of miEntries) {
           const mileageId = `MI-${yy}${mm}${dd}-${HH}${MM}-${rid8(8)}`
           const payload = {
             mileage_id: mileageId,
@@ -446,9 +446,9 @@ async function processJobCD(payload) {
   if (!cRes.ok) throw new Error("cancellation create failed")
 
   await updateDaysOccupancy(orderData, false, testMode)
+  await restoreCouponsAndMileage_OnCancel(orderData, isPaidFlow)
 
   if (isPaidFlow) {
-    await restoreCouponsAndMileage_OnCancel(orderData)
     const payAll = await fetchJSON(`https://terene-db-server.onrender.com/api/v2/payments`)
     const originalPayment = payAll.find((p) => p.order_id===orderId && p.payment_type==="order")
     if (!originalPayment) throw new Error("original payment not found")
