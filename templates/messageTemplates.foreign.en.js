@@ -24,7 +24,7 @@ Reservation Details
 6. Accomodation : TERENE ${stay_location}
 7. Stay Period : ${checkin_date}~${checkout_date}
 8. Number of Guests : ${adult} Adults, ${child} Infants
-9. Total Amount : ${final_price.toLocaleString()}
+9. Total Amount : KRW ${Number(final_price).toLocaleString()}
 
 Your reservation details can be checked at any time on the TERENE website under Reservation → ‘Check Guest Reservation’
 
@@ -85,7 +85,7 @@ Reservation Details
 6. Accomodation : TERENE ${stay_location}
 7. Stay Period : ${checkin_date}~${checkout_date}
 8. Number of Guests : ${adult} Adults, ${child} Infants
-9. Total Amount : ${final_price.toLocaleString()}
+9. Total Amount : KRW ${final_price.toLocaleString()}
 
 Once a cancellation request has been submitted, it cannot be withdrawn.
 Refunds will be handled in accordance with our policy and are usually completed within 3–5 business days.
@@ -120,7 +120,7 @@ Reservation Details
 6. Accomodation : TERENE ${stay_location}
 7. Stay Period : ${checkin_date}~${checkout_date}
 8. Number of Guests : ${adult} Adults, ${child} Infants
-9. Total Amount : ${final_price.toLocaleString()}
+9. Total Amount : KRW ${final_price.toLocaleString()}
 
 Refunds will be handled in accordance with our policy and are usually completed within 3–5 business days.
 Please accept our sincere apologies for the inconvenience caused.
